@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ERU-X1-WzM">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Audio" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9C-lx-wV8">
+                                <rect key="frame" x="64" y="255" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5i-Pe-8xf">
+                                <rect key="frame" x="164" y="311" width="0.0" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19f-33-75w">
+                                <rect key="frame" x="135" y="259" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sLN-b1-6V6"/>
+                                    <constraint firstAttribute="width" constant="50" id="uL0-2U-KaR"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="1.png"/>
+                                <state key="selected" image="2.png"/>
+                                <connections>
+                                    <action selector="Play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bP6-ds-k6v"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Kdx-2G-itb">
+                                <rect key="frame" x="20" y="526" width="280" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iV-DN-i7X">
+                                <rect key="frame" x="93" y="405" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kdx-2G-itb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="1hT-7t-ttW"/>
+                            <constraint firstItem="7iV-DN-i7X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="93" id="6om-xg-UUe"/>
+                            <constraint firstItem="19f-33-75w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7ch-4U-Yfz"/>
+                            <constraint firstItem="19f-33-75w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UIE-ZU-hi6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Kdx-2G-itb" secondAttribute="bottom" constant="40" id="VCo-Pc-0qF"/>
+                            <constraint firstAttribute="trailing" secondItem="Kdx-2G-itb" secondAttribute="trailing" constant="20" id="bsg-Fs-AHY"/>
+                            <constraint firstAttribute="trailing" secondItem="7iV-DN-i7X" secondAttribute="trailing" constant="81" id="cPP-Ke-1d1"/>
+                            <constraint firstItem="Kdx-2G-itb" firstAttribute="top" secondItem="7iV-DN-i7X" secondAttribute="bottom" constant="100" id="g0j-Cx-hHS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8ig-2y-xRM"/>
+                    <connections>
+                        <outlet property="progressView" destination="Kdx-2G-itb" id="Lz8-4S-11P"/>
+                        <outlet property="txtLable" destination="7iV-DN-i7X" id="iES-WS-jQe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.625" y="123.59154929577466"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zty-hO-X2a">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ERU-X1-WzM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gg1-Re-Zcw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8wc-GY-cEl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E3M-Uu-7ll" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1.png" width="128" height="128"/>
+        <image name="2.png" width="128" height="128"/>
+    </resources>
+</document>
